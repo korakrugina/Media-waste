@@ -2,19 +2,53 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>AR test kamera</title>
+    <title>AR izložba</title>
 
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
 
-  <body style="margin:0; overflow:hidden;">
+  <body style="margin: 0; overflow: hidden;">
 
-    <a-scene
-      embedded
-      arjs="sourceType: webcam; debugUIEnabled: true;">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
 
+      <!-- KAMERA -->
       <a-entity camera></a-entity>
+
+      <!-- SVJETLO -->
+      <a-light type="ambient" intensity="0.8"></a-light>
+
+      <!-- MODELI U PROSTORU -->
+
+      <a-entity
+        gltf-model="url(srce_ar.glb)"
+        position="0 0 -3"
+        scale="0.6 0.6 0.6">
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(propaliprojekt_ar.glb)"
+        position="2 0 -4"
+        scale="0.6 0.6 0.6">
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(fbslop_ar.glb)"
+        position="-2 0 -4"
+        scale="0.6 0.6 0.6">
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(slop_ar.glb)"
+        position="0 0 -6"
+        scale="0.6 0.6 0.6">
+      </a-entity>
+
+      <a-entity
+        gltf-model="url(rodjendan_ar.glb)"
+        position="3 0 -5"
+        scale="0.6 0.6 0.6">
+      </a-entity>
 
     </a-scene>
 
